@@ -8,15 +8,11 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr_node, *prev_node, *nxt_node;
 	int comp_val;
-
-	if (!list || !(*list))
+	/* return if a single or no element is in the list */
+	/* if list is NULL also return */
+	if (!list || !(*list) || (!(*list)->next))
 		return;
-	/* indicates that only one elem in list, therefore sorted */
-	if (!((*list)->next))
-	{
-		print_list(*list);
-		return;
-	}
+	/* set current node to the second node of the list */
 	curr_node = (*list)->next;
 	while (curr_node)
 	{
@@ -24,6 +20,8 @@ void insertion_sort_list(listint_t **list)
 		prev_node = curr_node->prev;
 		nxt_node = curr_node->next;
 
+		/* Continue to swap until we get to the start of list OR */
+		/* prev_node's value is less than curr_node */
 		while (prev_node && ((prev_node->n) > comp_val))
 		{
 			prev_node->next = nxt_node;
@@ -43,6 +41,7 @@ void insertion_sort_list(listint_t **list)
 			nxt_node = curr_node->next;
 			print_list(*list);
 		}
+		/* move to the next node */
 		curr_node = curr_node->next;
 	}
 }
