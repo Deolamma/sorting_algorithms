@@ -4,6 +4,7 @@
 /* STANDARD LIBARIES  */
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /* STRUCTURE DEFINATION  */
 /**
@@ -25,6 +26,7 @@ void print_list(const listint_t *);
 void print_array(const int *, size_t);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **);
+void selection_sort(int *, size_t);
 int partition(int *array, int start, int end, size_t size);
 void quick_sort(int *array, size_t size);
 void quicksort(int *array, int start, int end, size_t size);
