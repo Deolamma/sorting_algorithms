@@ -30,4 +30,6 @@ void selection_sort(int *, size_t);
 int partition(int *array, int start, int end, size_t size);
 void quick_sort(int *array, size_t size);
 void quicksort(int *array, int start, int end, size_t size);
+void shell_sort(int *array, size_t size);
+
 #endif /*end #ifndef SORT_H */
