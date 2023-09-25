@@ -35,6 +35,7 @@ void swap_fwd(
 
 /**
  * swap_bkwd - Perfroms swaps as we move backward
+ * @list: pointer to the address of the first node of doubly linked_list
  * @curr_node: node ahead of trail_node, should be less than nxt_node
  * @trail_node: It is behind curr_node and helps during swappping. It acts as
  * nxt_node in swap_fwd fxn
