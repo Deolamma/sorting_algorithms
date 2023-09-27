@@ -34,5 +34,7 @@ void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
 int max(int *array, size_t size);
 void cocktail_sort_list(listint_t **);
-
+void mergesort(int *array, size_t lb, size_t ub, int *output);
+void merge(int *array,  size_t lb, size_t mid, size_t ub, int *output);
+void merge_sort(int *array, size_t size);
 #endif /*end #ifndef SORT_H */
